@@ -1,0 +1,50 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "webdriverio": "^5.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "@wdio/cli": "^5.6.2",
+    "@wdio/local-runner": "^5.6.2",
+    "@wdio/mocha-framework": "^5.6.0",
+    "@wdio/selenium-standalone-service": "^5.6.0",
+    "@wdio/spec-reporter": "^5.6.0",
+    "@wdio/sync": "^5.6.0",
+    "selenium-standalone": "^6.15.6"
+  },
+  "scripts": {
+    "test": "node node_modules/.bin/wdio wdio.conf.js --log-level error",
+    "test:debug": "node node_modules/.bin/wdio wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  }
+}
